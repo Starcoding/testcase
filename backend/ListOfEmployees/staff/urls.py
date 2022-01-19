@@ -8,8 +8,7 @@ app_name = 'staff'
 router = routers.DefaultRouter()
 router.register(r'persons', PersonViewSet)
 
+
 urlpatterns = [
     path('', include(router.urls)),
-    path('person/', include('rest_framework.urls')),
-
 ]
