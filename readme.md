@@ -34,8 +34,8 @@ API доступно по адресу ```/persons/```
 ### Запуск проекта
 Для запуска проекта в "боевом" режиме используйте:  
 - ```docker-compose -f docker-compose.prod.yml up -d --build```  
-- ```docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput```  
-- ```docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear```  
+- ```docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput``` - для миграций  
+- ```docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear``` - для сборка статики  
 
 Для запуска проекта в режиме разработчика используйте,
 ```docker-compose -f docker-compose.yml up -d --build```  
