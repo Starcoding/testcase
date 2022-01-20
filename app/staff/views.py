@@ -11,6 +11,7 @@ class PersonViewSet(viewsets.ModelViewSet):
     serializer_class = PersonSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = [
+        'id'
         'first_name',
         'surname',
         'patronymic',
