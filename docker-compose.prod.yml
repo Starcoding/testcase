@@ -7,14 +7,14 @@ services:
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles
     ports:
-      - 80:80
+      - 80:8000
     depends_on:
       - web
   web:
     build:
       context: ./app
       dockerfile: Dockerfile.prod
-    command: gunicorn ListOfEmployees.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn listofemployees.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles

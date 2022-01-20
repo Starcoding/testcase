@@ -27,8 +27,8 @@ class Person(models.Model):
         'дата рождения',
         max_length=8
     )
-    ACTIVATED = 'AV'
     NOT_ACTIVATED = 'NA'
+    ACTIVATED = 'AV'
     DELETED = 'DL'
     STATUS_CHOICES = [
         (NOT_ACTIVATED, 'не активирован'),
